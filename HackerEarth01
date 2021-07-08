@@ -1,0 +1,27 @@
+'''
+# Sample code to perform I/O:
+
+name = input()                  # Reading input from STDIN
+print('Hi, %s.' % name)         # Writing output to STDOUT
+
+# Warning: Printing unwanted or ill-formatted data to output will cause the test cases to fail
+'''
+
+# Write your code here
+n = input()
+l = map(int, raw_input().split())
+print(n)
+print(l)
+r = 0
+for iteratingI in range(0, len(l)):
+    s = 0
+    j = 0
+    i = iteratingI
+    while i + j < len(l):
+        for k in range(i, i+j+1):
+            s += l[k]
+        i += j+1
+        j += 1
+    if s > r:
+        r = s
+print(r)
